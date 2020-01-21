@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>2단 레이아웃</title>
+	<style>
+		div {
+			border: 0px solid #ccc;
+			/* 모든 영역에 테두리 표시 */
+		}
+
+		#container {
+			width: 1000px;
+			/* 컨테이너 너비 */
+			padding: 20px;
+			/* 패딩 */
+			margin: 0 auto;
+			/* 화면 중앙에 배치 */
+			border: 0px;
+		}
+
+		#header {
+			width: 960px;
+			margin-bottom: 20px;
+			/* 아래 요소들과의 간격(마진) */
+		}
+
+		#contents {
+			width: 700px;
+			/* 너비 */
+			padding: 10px;
+			/* 패딩 */
+			float: left;
+			/* 왼쪽으로 플로팅 */
+			margin-bottom: 20px;
+			/* 아래 요소와의 간격 */
+			background: rgb(212, 211, 211);
+		}
+
+		#sidebar {
+			width: 240px;
+			/* 너비 */
+			padding: 5px;
+			/* 패딩 */
+			float: right;
+			/* 오른쪽으로 플로팅 */
+			margin-bottom: 20px;
+			/* 아래 요소와의 간격 */
+			background: rgb(212, 211, 211);
+		}
+
+		#footer {
+			width: 720px;
+			clear: both;
+			/* 양쪽 플로팅 해제 */
+		}
+
+		table {
+			width: 1000px;
+			height: 120px;
+		}
+
+		#table1 {
+			background-color: rgb(212, 211, 211);
+		}
+
+		input {
+			height: 30px;
+		}
+
+		#long {
+			width: 890px;
+		}
+
+		#t1 {
+			width: 180px;
+		}
+
+		#t2 {
+			width: 320px;
+		}
+
+		#t3 {
+			width: 50px;
+		}
+
+		#t4 {
+			width: 70px;
+		}
+
+		#table2 {
+			width: 790px;
+			height: 400px;
+			background-color: rgb(212, 211, 211);
+			position: relative;
+			top: 10px;
+		}
+
+		#table3 {
+			width: 190px;
+			height: 320px;
+			background-color: rgb(212, 211, 211);
+			position: relative;
+			left: 10px;
+		}
+
+		#radio {
+			width: 15px;
+			height: 15px;
+		}
+		#button1 {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2fa8e0), color-stop(1, #2fa8e0));
+            background: -moz-linear-gradient(center top, #2fa8e0 5%, #2fa8e0 100%);
+            background-color: #2fa8e0;
+			border-radius: 6px;
+            border: 1px solid #dcdcdc;
+            display: inline-block;
+            color: #ffffff;
+            font-family: arial;
+            font-size: 17px;
+            font-weight: bold;
+            font-style: normal;
+            height: 40px;
+            line-height: 40px;
+            width: 720px;
+            text-align: center;
+        }
+	</style>
+</head>
+
+<body>
+	<form>
+		<div id="container">
+			<div id="header">
+				<h2>시험응시</h2>
+				<table align="center" id="table1">
+					<tr>
+						<td align="center">응시자</td>
+						<td>&nbsp; <input type="text" id="t1" value="홍길동"></td>
+						<td>시험명 &nbsp;<input type="text" id="t2" value="신입사원 레벨 테스트"></td>
+						<td>문항 수 &nbsp;<input type="text" id="t3" value="10"></td>
+						<td>시험시간 &nbsp;<input type="text" id="t4" value="1시간"></td>
+					</tr>
+					<tr>
+						<td align="center">&nbsp;&nbsp; 상세정보</td>
+						<td colspan="4">&nbsp;&nbsp;<input type="text" id="long"
+								value="예담 주식회사 2020년 신입사원 공채 실기 테스트입니다.">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="sidebar">
+				<table>
+					<tr>
+						<td> 1. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="1번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="1번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="1번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="1번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 2. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="2번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="2번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="2번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="2번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 3. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="3번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="3번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="3번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="3번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 4. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="4번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="4번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="4번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="4번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 5. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="5번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="5번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="5번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="5번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 6. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="1" value="6번" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="6번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="6번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="6번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 7. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="7번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="7번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="7번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="7번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 8. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="8번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="8번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="8번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="8번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 9. &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="9번" value="1" checked>1
+							&nbsp;
+							<input type="radio" id="radio" name="9번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="9번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="9번" value="4" checked>4
+						</td>
+					</tr>
+					<tr>
+						<td> 10. &nbsp;&nbsp;&nbsp; <input type="radio" id="radio" name="10번" value="1" checked>1 &nbsp;
+							<input type="radio" id="radio" name="10번" value="2" checked>2 &nbsp;
+							<input type="radio" id="radio" name="10번" value="3" checked>3 &nbsp;
+							<input type="radio" id="radio" name="10번" value="4" checked>4
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="contents">
+				</br>
+				1. 하는 것이다 보라 청춘을 ! 그들의 몸이 얼마나 튼튼하며 그들의 피부가 얼마나 생생하며 그들의 눈에 무엇이 타오르고 있는가? 우리 눈이 그것을 보는 때에 우리의 귀는
+				생의 찬미를 듣는다 그것은 웅대한 관현악이며 미묘한
+				</br>
+				</br>
+				<input type="radio" id="radio" name="1" value=" 1" checked>1
+				</br>
+				<input type="radio" id="radio" name="1" value="2" checked>2
+				</br>
+				<input type="radio" id="radio" name="1" value="3" checked>3
+				</br>
+				<input type="radio" id="radio" name="1" value="4" checked>4
+				</br>
+				</br>
+				1. 하는 것이다 보라 청춘을 ! 그들의 몸이 얼마나 튼튼하며 그들의 피부가 얼마나 생생하며 그들의 눈에 무엇이 타오르고 있는가? 우리 눈이 그것을 보는 때에 우리의 귀는
+				생의 찬미를 듣는다 그것은 웅대한 관현악이며 미묘한
+				</br>
+				</br>
+				<input type="radio" id="radio" name="2" value=" 1" checked>1
+				</br>
+				<input type="radio" id="radio" name="2" value="2" checked>2
+				</br>
+				<input type="radio" id="radio" name="2" value="3" checked>3
+				</br>
+				<input type="radio" id="radio" name="2" value="4" checked>4
+				</br>
+				</br>
+				1. 하는 것이다 보라 청춘을 ! 그들의 몸이 얼마나 튼튼하며 그들의 피부가 얼마나 생생하며 그들의 눈에 무엇이 타오르고 있는가? 우리 눈이 그것을 보는 때에 우리의 귀는
+				생의 찬미를 듣는다 그것은 웅대한 관현악이며 미묘한
+				</br>
+				</br>
+				<input type="radio" id="radio" name="3" value=" 1" checked>1
+				</br>
+				<input type="radio" id="radio" name="3" value="2" checked>2
+				</br>
+				<input type="radio" id="radio" name="3" value="3" checked>3
+				</br>
+				<input type="radio" id="radio" name="3" value="4" checked>4
+				</br>
+			</div>
+			<div id="footer">
+				<input id="button1" value="제출하기" onclick="location.href='result.html'"> 
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
